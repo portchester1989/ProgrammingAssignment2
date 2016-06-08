@@ -1,10 +1,13 @@
-## make a special list of 
-## Write a short comment describing this function
+## make a special list of matrix to cache the inverse.
+##
 m<-NULL
 makeCacheMatrix <- function(x = matrix()) {
     m<<-NULL
-    set<-function(y){x<<-y
-    m<<-NULL}
+    set<-function(y)
+    {
+        x<<-y
+        m<<-NULL
+    }
     get<-function()x
     setsolve<-function(solve) m<<-solve
     getsolve <-function()m
@@ -13,12 +16,13 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## compute the inverse
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         m <- x$getsolve()
-        if(!is.null(m)) {
+        if(!is.null(m))
+        {
             message("getting cached data")
             return(m)
         }
