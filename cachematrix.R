@@ -1,6 +1,4 @@
-## Put comments here that give an overall description of what your
-## functions do
-
+## make a special list of 
 ## Write a short comment describing this function
 m<-NULL
 makeCacheMatrix <- function(x = matrix()) {
